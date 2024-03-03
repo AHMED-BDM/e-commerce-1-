@@ -1,0 +1,117 @@
+@keyframes changeColors {
+    0% {
+        background-color: #091306;
+    }
+    33% {
+        background-color: #0d360d;
+    }
+    66% {
+        background-color: #090934;
+    }
+    80% {
+        background-color: #52250c;
+    }
+    100% {
+        background-color: #0c1a08;
+    }
+}
+
+
+body {
+    animation: changeColors 10s infinite;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: #051922;
+    color: #eaff00;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 5px;
+    background-color: #dc7a0b;
+    color: #000000;
+    /* تغيير لون النص ليتناسب مع الخلفية */
+}
+
+.btn-primary,
+.btn-danger {
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.product-image {
+    max-height: min-content;
+    max-width: max-content;
+    min-height: min-content;
+    border: 7px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    /* إضافة خاصية الوضع للعنصر الأب */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    /* تغيير الارتفاع ليتناسب مع العرض */
+    object-fit: contain;
+    /* ضمان عرض الصورة كاملة داخل الإطار */
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    position: absolute;
+    /* تحديد موضع الأيقونة بالنسبة للعنصر الأب */
+    top: 50%;
+    /* توسيط الأيقونة عموديًا */
+    right: -25px;
+    /* تحديد المسافة من اليمين */
+    transform: translateY(-50%);
+    /* تعديل موضع الأيقونة بالنسبة لعرض الصورة */
+    color: #ffffff;
+    /* تغيير لون السهم */
+    font-size: 20px;
+    /* تكبير حجم السهم */
+}
+
+
+/* تحديد تنسيق رسالة الخطأ */
+.form-control:invalid+.required-message::after {
+    content: "This field is required.";
+    /* نص الرسالة */
+    color: red;
+    /* لون النص */
+    font-size: 14px;
+    /* حجم الخط */
+    font-style: italic;
+    /* نمط الخط */
+    display: block;
+    /* عرض الرسالة كبلوك */
+    margin-top: 5px;
+    /* المسافة العلوية */
+}
+
+.col-opt2 {
+    background-color: #051922;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.col-opt1 {
+    background-color: #dc7a0b;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
